@@ -1,0 +1,156 @@
+{
+    "CARD_TYPE_ONE": [
+        {
+            "cards": [ 3 ],
+            "diceFace": 9,
+            "compareType": 1,
+            "compareFace": 3,
+            "expertResult": 1,
+            "myCards": [4, 5, 9, 11, 11, 11, 12, 12, 12, 13]
+        },
+        {
+            "cards": [ 12 ],
+            "diceFace": 13,
+            "compareType": 1,
+            "compareFace": 12,
+            "expertResult": 1,
+            "myCards": [4, 5, 9, 11, 11, 11, 12, 12, 12, 13]
+        }
+    ],
+	"CARD_TYPE_ONELINE": [
+        {
+            "cards": [ 3, 4, 5, 6, 7 ],
+            "diceFace": 15,
+            "compareType": 2,
+            "compareFace": 7,
+            "expertResult": 1,
+            "myCards": [4, 5, 6, 7, 7, 8, 9, 10, 10, 10, 11, 12, 13, 14, 15]
+        },
+        {
+            "cards": [ 5, 6, 7, 8, 9 ],
+            "diceFace": 15,
+            "compareType": 2,
+            "compareFace": 9,
+            "expertResult": 1,
+            "myCards": [3, 3, 3, 4, 5, 6, 6, 7, 8, 9, 2, 11, 12, 13]
+        }
+    ],
+    "CARD_TYPE_TWO": [
+        {
+            "cards": [ 3, 3 ],
+            "diceFace": 9,
+            "compareType": 3,
+            "compareFace": 3,
+            "expertResult": 1,
+            "myCards": [4, 4, 9, 9, 11, 11, 11, 12, 12, 13]
+        },
+        {
+            "cards": [ 12, 12 ],
+            "diceFace": 9,
+            "compareType": 3,
+            "compareFace": 12,
+            "expertResult": 1,
+            "myCards": [4, 5, 9, 9, 11, 11, 12, 12, 12, 13]
+        }
+    ],
+    "CARD_TYPE_TWOLINE": [
+        {
+            "cards": [ 7, 7, 8, 8, 9, 9 ],
+            "diceFace": 15,
+            "compareType": 4,
+            "compareFace": 9,
+            "expertResult": 1,
+            "myCards": [4, 4, 5, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 15, 2, 2]
+        }
+    ],
+	"CARD_TYPE_THREE": [
+        {
+            "cards": [ 8, 8, 8 ],
+            "diceFace": 9,
+            "compareType": 5,
+            "compareFace": 8,
+            "expertResult": 1,
+            "myCards": [10, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 2, 2, 3, 3, 4, 4, 9, 9, 9, 9]
+        }
+    ],
+    "CARD_TYPE_THREELINE": [
+        {
+            "cards": [ 4, 4, 4, 5, 5, 5],
+            "diceFace": 15,
+            "compareType": 6,
+            "compareFace": 5,
+            "expertResult": 0,
+            "myCards": [3, 3, 4, 5, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 10, 10, 2, 2, 2, 2]
+        }
+    ],
+	"CARD_TYPE_THREEWITHONE": [
+        {
+            "cards": [ 5, 5, 5, 7 ],
+            "diceFace": 15,
+            "compareType": 7,
+            "compareFace": 5,
+            "expertResult": 1,
+            "myCards": [6, 6, 6, 7, 8, 9, 10, 11, 11, 11, 12, 12, 12, 2, 2, 2, 2]
+        }
+    ],
+	"CARD_TYPE_THREEWITHTWO": [
+        {
+            "cards": [ 5, 5, 5, 7, 7 ],
+            "diceFace": 15,
+            "compareType": 8,
+            "compareFace": 5,
+            "expertResult": 1,
+            "myCards": [6, 7, 8, 8, 8, 9, 10, 10, 10, 2, 2, 2, 2]
+        }
+    ],
+	"CARD_TYPE_PLANEWITHONE": [
+        {
+            "cards": [ 5, 5, 5, 6, 6, 6, 7, 8 ],
+            "diceFace": 15,
+            "compareType": 9,
+            "compareFace": 6,
+            "expertResult": 1,
+            "myCards": [6, 7, 8, 8, 8, 9, 10, 10, 10, 11, 11, 11, 2, 2, 2, 2]
+        }
+    ],
+    "CARD_TYPE_PLANEWITHWING": [
+        {
+            "cards": [ 5, 5, 5, 6, 6, 6, 7, 7, 8, 8 ],
+            "diceFace": 15,
+            "compareType": 10,
+            "compareFace": 6,
+            "expertResult": 1,
+            "myCards": [6, 7, 8, 8, 8, 9, 10, 10, 10, 11, 11, 11, 2, 2, 2, 2]
+        }
+    ],
+	"CARD_TYPE_SOFTBOMB": [
+        {
+            "cards": [ 5, 5, 5, 2 ],
+            "diceFace": 15,
+            "compareType": 13,
+            "compareFace": 6,
+            "expertResult": 1,
+            "myCards": [6, 7, 3, 3, 3, 9, 10, 10, 10, 11, 11, 11, 2, 2, 2, 2, 14, 15]
+        }
+    ],
+    "CARD_TYPE_GHOSTBOMB": [
+        {
+            "cards": [ 9, 9, 9, 9 ],
+            "diceFace": 7,
+            "compareType": 14,
+            "compareFace": 9,
+            "expertResult": 1,
+            "myCards": [6, 7, 3, 3, 3, 3, 10, 10, 10, 10, 7, 7, 7, 7, 2, 2, 2, 14, 15]
+        }
+    ],
+	"CARD_TYPE_GHOSTBOMB": [
+        {
+            "cards": [ 7, 7, 7, 7 ],
+            "diceFace": 7,
+            "compareType": 15,
+            "compareFace": 7,
+            "expertResult": 1,
+            "myCards": [6, 7, 3, 3, 3, 3, 10, 10, 10, 10, 11, 11, 11, 2, 2, 2, 2, 14, 15]
+        }
+    ]
+}

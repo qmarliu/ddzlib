@@ -1,0 +1,10 @@
+************************************************
+find "cards": [6, 7, 3, 3, 3, 3, 10, 10, 10, 10, 7, 7, 7, 7, 2, 2, 2, 14, 15]
+compare "cards": [ 9, 9, 9, 9 ]             "diceFace": 7
+"compareType": CARD_TYPE_BOMB-14            "compareFace": 9
+"flag": Correct                             "from": CARD_TYPE_THREE
+outVc[0]: [ 10, 10, 10, 10 ]                "outFrom"CARD_TYPE_BOMB-14
+outVc[1]: [ 7, 7, 7, 7 ]                    "outFrom"CARD_TYPE_BOMB-14
+outVc[2]: [ 14, 15 ]                        "outFrom"CARD_TYPE_BOMB-14
+************************************************
+

@@ -1,0 +1,816 @@
+{
+	"CARD_TYPE_ONELINE": [
+        {
+            "cards": [ 9, 9, 9, 9, 3 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 3,
+            "backUpType": [2],
+            "backUpFace": [7]
+        },
+        {
+            "cards": [ 3, 7, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 7,
+            "backUpType": [2],
+            "backUpFace": [7]
+        },
+        {
+            "cards": [ 3, 4, 9, 9, 10 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 4, 9, 9, 7 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 7,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 7, 8, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 8,
+            "backUpType": [2],
+            "backUpFace": [11]
+        },
+        {
+            "cards": [ 4, 8, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 7, 8, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 10,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 5, 6, 7, 8, 9 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 9,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 5, 6, 9, 13, 14 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 7, 9, 9, 10, 11 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 11,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 2, 9, 11, 12, 13 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 2, 3, 4, 5, 9 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 4, 5, 6, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 5, 7, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 11,
+            "expertFace": 7,
+            "backUpType": [2],
+            "backUpFace": [8]
+        },
+        {
+            "cards": [ 3, 4, 5, 7, 9, 9, 9, 10, 11, 12, 13 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 13,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 4, 5, 7, 9, 9, 9, 9, 10, 11, 12, 13 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 14,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 4, 5, 7, 9, 9, 10, 11, 12, 13 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 1, 3, 5, 7, 11, 13, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ],
+    "CARD_TYPE_TWO": [
+        {
+            "cards": [ 9, 9 ],
+            "diceFace": 9,
+            "expertType": 3,
+            "expertFace": 9,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 10 ],
+            "diceFace": 9,
+            "expertType": 3,
+            "expertFace": 10,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 14 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 15 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ],
+    "CARD_TYPE_TWOLINE": [
+        {
+            "cards": [ 3, 3, 4, 9 ],
+            "diceFace": 9,
+            "expertType": 7,
+            "expertFace": 3,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 13,
+            "expertFace": 4,
+            "backUpType": [7],
+            "backUpFace": [4]
+        },
+        {
+            "cards": [ 3, 4, 5, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 11,
+            "expertFace": 5,
+            "backUpType": [2, 4],
+            "backUpFace": [8, 5]
+        },
+        {
+            "cards": [ 3, 4, 4, 5, 5, 9 ],
+            "diceFace": 9,
+            "expertType": 4,
+            "expertFace": 5,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 4, 6, 5, 5, 9 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 5, 5, 8, 9 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 5, 5, 8, 8, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 10,
+            "expertFace": 9,
+            "backUpType": [4],
+            "backUpFace": [8]
+        },
+        {
+            "cards": [ 3, 3, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 4,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 4,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 9, 9, 10 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13 ],
+            "diceFace": 9,
+            "expertType": 4,
+            "expertFace": 13,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 15 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ],
+	"CARD_TYPE_THREE": [
+        {
+            "cards": [ 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 5,
+            "expertFace": 9,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 9, 10 ],
+            "diceFace": 9,
+            "expertType": 5,
+            "expertFace": 10,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 10, 10 ],
+            "diceFace": 9,
+            "expertType": 5,
+            "expertFace": 10,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 10, 11 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 14, 15 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 9, 10, 14 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ],
+    "CARD_TYPE_THREELINE": [
+        {
+            "cards": [ 3, 3, 3, 4, 4, 9 ],
+            "diceFace": 9,
+            "expertType": 6,
+            "expertFace": 4,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 4, 5, 6, 9 ],
+            "diceFace": 9,
+            "expertType": 11,
+            "expertFace": 4,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 5, 5, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 11,
+            "expertFace": 5,
+            "backUpType": [4, 6],
+            "backUpFace": [6, 5]
+        },
+        {
+            "cards": [ 3, 4, 6, 5, 5, 9 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 11,
+            "expertFace": 3,
+            "backUpType": [4, 6],
+            "backUpFace": [5, 4]
+        },
+        {
+            "cards": [ 4, 4, 4, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 11,
+            "expertFace": 4,
+            "backUpType": [6],
+            "backUpFace": [5]
+        },
+        {
+            "cards": [ 4, 4, 5, 5, 6, 6, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 6,
+            "expertFace": 6,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 4,
+            "expertFace": 9,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 4,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 9, 9, 10 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 12 ],
+            "diceFace": 9,
+            "expertType": 10,
+            "expertFace": 8,
+            "backUpType": [6],
+            "backUpFace": [12]
+        },
+        {
+            "cards": [ 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 5, 5, 6, 6, 7, 7, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 7,
+            "backUpType": [4, 6],
+            "backUpFace": [9, 7]
+        }
+    ],
+	"CARD_TYPE_THREEWITHONE": [
+        {
+            "cards": [ 8, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 13,
+            "expertFace": 8,
+            "backUpType": [7],
+            "backUpFace": [8]
+        },
+        {
+            "cards": [ 2, 3, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 7,
+            "expertFace": 15,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 7,
+            "expertFace": 12,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 13,
+            "expertFace": 3,
+            "backUpType": [7],
+            "backUpFace": [3]
+        },
+        {
+            "cards": [ 7, 7, 7, 9 ],
+            "diceFace": 9,
+            "expertType": 13,
+            "expertFace": 7,
+            "backUpType": [7],
+            "backUpFace": [7]
+        },
+        {
+            "cards": [ 3, 3, 4, 9 ],
+            "diceFace": 9,
+            "expertType": 7,
+            "expertFace": 3,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 7,
+            "expertFace": 4,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 8, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 7, 8, 9 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ],
+	"CARD_TYPE_THREEWITHTWO": [
+        {
+            "cards": [ 8, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 8,
+            "backUpType": [2],
+            "backUpFace": [12]
+        },
+        {
+            "cards": [ 3, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 3,
+            "backUpType": [2],
+            "backUpFace": [7]
+        },
+        {
+            "cards": [ 2, 3, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 15,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 9, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 12,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 3,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 7, 7, 7, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 7,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 3, 3, 4, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 4,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 4, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 12,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 4, 8, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 7, 8, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 10,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 5, 6, 7, 8, 9 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 9,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 5, 6, 9, 13, 14 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 5, 9, 13, 14, 15 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 5, 5, 9, 12, 12 ],
+            "diceFace": 9,
+            "expertType": 8,
+            "expertFace": 12,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ],
+	"CARD_TYPE_PLANEWITHONE": [
+        {
+            "cards": [ 7, 7, 8, 8, 8, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [12],
+            "backUpFace": [8]
+        },
+        {
+            "cards": [ 7, 8, 8, 8, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [12],
+            "backUpFace": [8]
+        },
+        {
+            "cards": [ 7, 8, 8, 8, 9, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [12],
+            "backUpFace": [8]
+        },
+        {
+            "cards": [ 7, 7, 8, 8, 9, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 8,
+            "backUpType": [12],
+            "backUpFace": [12]
+        },
+        {
+            "cards": [ 6, 7, 8, 8, 9, 9, 9, 12 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 6, 8, 9, 9, 9, 10, 12 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 8, 9, 9, 9, 10, 12, 13 ],
+            "diceFace": 9,
+            "expertType": 2,
+            "expertFace": 13,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 6, 8, 8, 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [12, 4],
+            "backUpFace": [15, 9]
+        },
+        {
+            "cards": [ 6, 6, 8, 8, 9, 9, 11, 12 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [6],
+            "backUpFace": [9]
+        },
+        {
+            "cards": [ 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 10 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12, 13 ],
+            "diceFace": 9,
+            "expertType": 0,
+            "expertFace": 0,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 6, 6, 6, 8, 8, 8, 9, 9, 9, 10, 11, 12 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 1, 2, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 11, 12, 13 ],
+            "diceFace": 9,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [10],
+            "backUpFace": [8]
+        },
+        {
+            "cards": [ 4, 4, 4, 5, 6, 6, 7, 7, 7, 9, 9, 9, 11, 11, 11, 11 ],
+            "diceFace": 11,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ],
+    "CARD_TYPE_PLANEWITHWING": [
+        {
+            "cards": [ 3, 3, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 10, 10, 10, 11, 11, 13, 13 ],
+            "diceFace": 10,
+            "expertType": 10,
+            "expertFace": 8,
+            "backUpType": [],
+            "backUpFace": []
+        },
+        {
+            "cards": [ 2, 2, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 10, 10, 10, 11, 11, 13 ],
+            "diceFace": 10,
+            "expertType": 9,
+            "expertFace": 9,
+            "backUpType": [10],
+            "backUpFace": [8]
+        }
+    ],
+	"CARD_TYPE_SOFTBOMB": [
+        {
+            "cards": [ 2, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 13,
+            "expertFace": 15,
+            "backUpType": [7],
+            "backUpFace": [15]
+        }
+    ],
+	"CARD_TYPE_GHOSTBOMB": [
+        {
+            "cards": [ 9, 9, 9, 9 ],
+            "diceFace": 9,
+            "expertType": 15,
+            "expertFace": 9,
+            "backUpType": [],
+            "backUpFace": []
+        }
+    ]
+}
