@@ -4,7 +4,7 @@
             "cards": [ 9, 9, 9, 9, 3 ],
             "diceFace": 9,
             "expertType": 8,
-            "expertFace": 3,
+            "expertFace": 9,
             "backUpType": [2],
             "backUpFace": [7]
         },
@@ -193,8 +193,8 @@
             "diceFace": 9,
             "expertType": 13,
             "expertFace": 4,
-            "backUpType": [7],
-            "backUpFace": [4]
+            "backUpType": [],
+            "backUpFace": []
         },
         {
             "cards": [ 3, 4, 5, 9, 9, 9 ],
@@ -463,8 +463,8 @@
             "diceFace": 9,
             "expertType": 13,
             "expertFace": 8,
-            "backUpType": [7],
-            "backUpFace": [8]
+            "backUpType": [],
+            "backUpFace": []
         },
         {
             "cards": [ 2, 3, 9, 9 ],
@@ -487,16 +487,16 @@
             "diceFace": 9,
             "expertType": 13,
             "expertFace": 3,
-            "backUpType": [7],
-            "backUpFace": [3]
+            "backUpType": [],
+            "backUpFace": []
         },
         {
             "cards": [ 7, 7, 7, 9 ],
             "diceFace": 9,
             "expertType": 13,
             "expertFace": 7,
-            "backUpType": [7],
-            "backUpFace": [7]
+            "backUpType": [],
+            "backUpFace": []
         },
         {
             "cards": [ 3, 3, 4, 9 ],
@@ -536,7 +536,7 @@
             "cards": [ 8, 9, 9, 9, 9 ],
             "diceFace": 9,
             "expertType": 8,
-            "expertFace": 8,
+            "expertFace": 9,
             "backUpType": [2],
             "backUpFace": [12]
         },
@@ -544,7 +544,7 @@
             "cards": [ 3, 9, 9, 9, 9 ],
             "diceFace": 9,
             "expertType": 8,
-            "expertFace": 3,
+            "expertFace": 9,
             "backUpType": [2],
             "backUpFace": [7]
         },
@@ -568,7 +568,7 @@
             "cards": [ 3, 3, 9, 9, 9 ],
             "diceFace": 9,
             "expertType": 8,
-            "expertFace": 3,
+            "expertFace": 9,
             "backUpType": [],
             "backUpFace": []
         },
@@ -799,8 +799,8 @@
             "diceFace": 9,
             "expertType": 13,
             "expertFace": 15,
-            "backUpType": [7],
-            "backUpFace": [15]
+            "backUpType": [],
+            "backUpFace": []
         }
     ],
 	"CARD_TYPE_GHOSTBOMB": [

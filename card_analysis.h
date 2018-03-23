@@ -72,8 +72,8 @@ private:
 
     void ghost_set_face_and_type(int set_type,int set_face);
 
-    bool has_bigger_than_ace(unsigned check_bit, const vector<Card> &refCard1 = vector<Card>(), const vector<Card>&refCard2 = vector<Card>(), const vector<Card>&refCard3 = vector<Card>()) const;
-    int ghost_calc_gap(unsigned check_type, vector<int> &line_cards_face, const vector<Card> &refCard1 = vector<Card>(), const vector<Card> &refCard2 = vector<Card>(), const vector<Card> &refCard3 = vector<Card>()) const;
+    bool has_bigger_than_ace() const;
+    int ghost_calc_gap() const;
 };
 
 

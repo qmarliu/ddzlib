@@ -109,10 +109,9 @@ bool CardAnalysis::operator<(const CardAnalysis &card_ana) const
     {
         return face < card_ana.face;
     }
-    else
+    else if (type >= CARD_TYPE_SOFTBOMB || card_ana.type >= CARD_TYPE_SOFTBOMB)
     {
-        if (type >= CARD_TYPE_SOFTBOMB || card_ana.type >= CARD_TYPE_SOFTBOMB)
-			return type < card_ana.type;	
+        return type < card_ana.type;
     }
     return false;
 }
@@ -266,8 +265,10 @@ int CardAnalysis::do_analysis()
 	}
 	
 	if (len == card_stat.card2.size()
-		&& card_stat.card2.size() == card_stat.line2.size()) {
-		if (check_is_line(card_stat, 2)) {
+		&& card_stat.card2.size() == card_stat.line2.size()) 
+	{
+		if (check_is_line(card_stat, 2)) 
+		{
             face = card_stat.card2[card_stat.card2.size() - 1].face;
             type = CARD_TYPE_TWOLINE;
 			return type;
@@ -335,7 +336,8 @@ int CardAnalysis::do_analysis()
 	if (card_stat.card3.size() != 0 && check_arr_is_line(card_stat.card3, 3))
 	{
 		left_card_len = card_stat.card1.size() + card_stat.card2.size() + card_stat.card4.size();
-		if (left_card_len * 3 == card_stat.card3.size()) {
+		if (left_card_len * 3 == card_stat.card3.size()) 
+		{
 			face = card_stat.card3[card_stat.card3.size() - 1].face;
 			type = CARD_TYPE_PLANEWITHONE;
 			return type;
@@ -479,31 +481,29 @@ int CardAnalysis::ghost_check_threewithone()
     if (len != 4) return 0;
 
     //三带1的情况
-    if (ghost_num == 3 && card_stat.card1.size() == 1)
-    {
-        max_face = card_stat.card1[0].face; 
-        if (max_face < ghost_face)
-            max_face = ghost_face;
-    }
+    // if (ghost_num == 3 && card_stat.card1.size() == 1)
+    // {
+    //     max_face = card_stat.card1[0].face;
+    //     if (max_face < ghost_face)
+    //     {
+    //         max_face = ghost_face;
+    //     }
+    // }
 
-    else if (ghost_num == 2 && card_stat.card1.size() == 2)
+    /*else */
+    if (ghost_num == 2 && card_stat.card1.size() == 2)
     {
         max_face = card_stat.card1[1].face; //取card1中较大的牌做为最大的牌
     }
 
-    else if (ghost_num == 2 && card_stat.card2.size() == 2)
-    {
-        max_face = card_stat.card2[1].face; 
-    }
+    // else if (ghost_num == 2 && card_stat.card2.size() == 2)
+    // {
+    //     max_face = card_stat.card2[1].face;
+    // }
 
     else if (ghost_num == 1 && card_stat.card1.size() == 1 && card_stat.card2.size() == 2)
     {
         max_face = card_stat.card2[1].face;
-    }
-
-    else if (ghost_num == 1 && card_stat.card3.size() == 3)
-    {
-        max_face = card_stat.card3[2].face;
     }
     ghost_set_face_and_type(CARD_TYPE_THREEWITHONE, max_face);
     return max_face;
@@ -584,19 +584,17 @@ int CardAnalysis::ghost_check_line()
     //顺子，检测一条龙的时候，必须只有card1中有值
     if (card_stat.card2.size() != 0 || card_stat.card3.size() != 0 || card_stat.card4.size() != 0) return 0;
 
-    const vector<Card> &refCard1 = card_stat.card1;
-    const int card1Len = refCard1.size();
-    if (has_bigger_than_ace(0x01, refCard1)) return 0; //有2和王就不可能是顺子
+
+    if (has_bigger_than_ace()) return 0; //有2和王就不可能是顺子
 
     //计算不是鬼牌的牌值，总间距是多少。如6，7之间没有间距  6， 8 之间有1个间距
     //如果鬼牌的数量大于等于间距值，说明能组成顺子
-    vector<int> do_nothing;
-    int gap = ghost_calc_gap(1, do_nothing, refCard1);
+    int gap = ghost_calc_gap();
 
     if (ghost_num < gap) return 0;
 
     //计算顺子中最大的牌值
-    max_face = refCard1[card1Len - 1].face + (ghost_num - gap);
+    max_face = card_stat.line1[card_stat.line1.size() - 1].face + (ghost_num - gap);
 
     if (max_face > Card::Ace) max_face = Card::Ace;
     ghost_set_face_and_type(CARD_TYPE_ONELINE, max_face);
@@ -618,9 +616,7 @@ int CardAnalysis::ghost_check_doubleline()
     const vector<Card> &refCard1 = card_stat.card1;
     const int card1Len = refCard1.size();
 
-    const vector<Card> &refCard2 = card_stat.card2;
-
-    if (has_bigger_than_ace(0x03, refCard1, refCard2)) return 0;//有2和王就不可能是顺子
+    if (has_bigger_than_ace()) return 0; //有2和王就不可能是顺子
 
     //先和单牌配对，使其能组成对子
     int left_num = ghost_num;
@@ -632,15 +628,14 @@ int CardAnalysis::ghost_check_doubleline()
 
     if (left_num % 2 != 0) return 0;
 
-    vector<int> pair_card_face; //记录当前组成对子的面值
     //计算总间距。如6，7之间没有间距  6， 8 之间有1个间距
     //如果鬼牌的数量大于等于间距值*2，说明能组成连对
-    int gap = ghost_calc_gap(2, pair_card_face, refCard1, refCard2);
+    int gap = ghost_calc_gap();
 
     if (left_num < gap*2) return 0;
 
     //计算连对中最大的牌值
-    max_face = pair_card_face[pair_card_face.size() - 1] + (left_num - 2 * gap) / 2;
+    max_face = card_stat.line1[card_stat.line1.size() - 1].face + (left_num - 2 * gap) / 2;
     if (max_face > Card::Ace) max_face = Card::Ace;
     ghost_set_face_and_type(CARD_TYPE_TWOLINE, max_face);
     return max_face;
@@ -661,8 +656,7 @@ int CardAnalysis::ghost_check_tripleline()
     const int card1Len = refCard1.size();
     const vector<Card> &refCard2 = card_stat.card2;
     const int card2Len = refCard2.size();
-    const vector<Card> &refCard3 = card_stat.card3;
-    if (has_bigger_than_ace(0x07, refCard1, refCard2, refCard3)) return 0;//有2和王就不可能是顺子
+    if (has_bigger_than_ace()) return 0; //有2和王就不可能是顺子
 
     //先和单牌配对，使其能组成三个
     int left_num = ghost_num;
@@ -680,16 +674,15 @@ int CardAnalysis::ghost_check_tripleline()
     }
     if (left_num % 3 != 0) return 0;
 
-    vector<int> triple_card_face; //记录当前组成三个的面值
 
     //计算总间距。如6，7之间没有间距  6， 8 之间有1个间距
     //如果鬼牌的数量大于等于间距值*3，说明能组成三顺
-    int gap = ghost_calc_gap(3, triple_card_face, refCard1, refCard2, refCard3);
+    int gap = ghost_calc_gap();
 
     if (left_num < gap*3) return 0;
 
     //计算三顺中最大的牌值
-    max_face = triple_card_face[triple_card_face.size() - 1] + (left_num - 3 * gap) / 3;
+    max_face = card_stat.line1[card_stat.line1.size() - 1].face + (left_num - 3 * gap) / 3;
     if (max_face > Card::Ace) max_face = Card::Ace;
 
     ghost_set_face_and_type(CARD_TYPE_THREELINE, max_face);
@@ -1127,114 +1120,34 @@ void CardAnalysis::ghost_set_face_and_type(int set_type, int set_face)
 
 /*
  @brief 判断连张中是否有2或王, 如果2是鬼牌，则有也没事
- @param check_bit[in] 第1位为1检测card1中有没有， 第2位为1表示检查card2中有没有， 第3位表示检查card3。可组合使用
- @param refCard1[in] card1
- @param refCard1[in] card2
- @param refCard1[in] card3
  @retur true表示有， false表示没有
 */
-bool CardAnalysis::has_bigger_than_ace(unsigned int check_bit, const vector<Card> &refCard1, const vector<Card> &refCard2, const vector<Card> &refCard3) const
+bool CardAnalysis::has_bigger_than_ace() const
 {
-    if (check_bit & 0x01)
+    const int cardLen = card_stat.line1.size();
+    if (cardLen > 0)
     {
-        const int card1Len = refCard1.size();
-        if (card1Len > 0)
+        if (card_stat.line1[cardLen - 1].face > Card::Ace)
         {
-            if (refCard1[card1Len-1].face >= Card::Two) return true;
-            // if (refCard1[card1Len].face == Card::Two && ghost_face != Card::Two) return true;
+            return true;
         }
     }
-
-    if (check_bit & 0x02)
-    {
-        const int card2Len = refCard2.size();
-        if (card2Len > 0)
-        {
-            if (refCard2[card2Len - 1].face >= Card::Two) return true;
-            // if (refCard2[card2Len].face == Card::Two && ghost_face != Card::Two) return true;
-        }
-    }
-
-    if (check_bit & 0x04)
-    {
-        const int card3Len = refCard3.size();
-        if (card3Len > 0)
-        {
-            if (refCard3[card3Len-1].face >= Card::Two) return true;
-            // if (refCard3[card3Len].face == Card::Two && ghost_face != Card::Two) return true;
-        }
-    }
-
     return false;
 }
 
 /*
  @brief 判断连张不够的情况下，缺多少连张的牌值
- @param check_type[in] 1检测单顺  2检测双顺 3检测三顺
- @param line_cards[in] 连张的牌
- @param refCard1[in] card1
- @param refCard1[in] card2
- @param refCard1[in] card3
  @retur 缺连张的牌值的个数
 */
-int CardAnalysis::ghost_calc_gap(unsigned check_type , vector<int> &line_cards_face, const vector<Card> &refCard1, const vector<Card> &refCard2 , const vector<Card> &refCard3) const
+int CardAnalysis::ghost_calc_gap() const
 {
     //计算不是鬼牌的牌值，总间距是多少。如6，7之间没有间距  6， 8 之间有1个间距
     //如果鬼牌的数量大于等于间距值，说明能组成顺子
     int gap = 0;
-    if (check_type == 1)
+    for (unsigned int i = 0, j = 1; j < card_stat.line1.size(); ++i, ++j)
     {
-        const int card1Len = refCard1.size();
-        for (int i = 0, j = 1; j < card1Len; ++i, ++j)
-        {
-            gap += refCard1[j].face - refCard1[i].face - 1;
-        }
+        gap += card_stat.line1[j].face - card_stat.line1[i].face - 1;
     }
-
-    else if (check_type == 2)
-    {
-        const int card1Len = refCard1.size();
-        const int card2Len = refCard2.size();
-        for (int i = 0; i < card1Len; ++i)
-        {
-            line_cards_face.push_back(refCard1[i].face);
-        }
-        for (int i = 0; i < card2Len; i += 2)
-        {
-            line_cards_face.push_back(refCard2[i].face);
-        }
-        sort(line_cards_face.begin(), line_cards_face.end());
-
-        for (unsigned i = 0, j = 1; j < line_cards_face.size(); ++i, ++j)
-        {
-            gap += line_cards_face[j] - line_cards_face[i] - 1;
-        }
-    }
-
-    else if (check_type == 3)
-    {
-        const int card1Len = refCard1.size();
-        const int card2Len = refCard2.size();
-        const int card3Len = refCard3.size();
-        for (int i = 0; i < card1Len; ++i)
-        {
-            line_cards_face.push_back(refCard1[i].face);
-        }
-        for (int i = 0; i < card2Len; i += 2)
-        {
-            line_cards_face.push_back(refCard2[i].face);
-        }
-        for (int i = 0; i < card3Len; i += 3)
-        {
-            line_cards_face.push_back(refCard3[i].face);
-        }
-        sort(line_cards_face.begin(), line_cards_face.end());
-        for (unsigned int i = 0, j = 1; j < line_cards_face.size(); ++i, ++j)
-        {
-            gap += line_cards_face[j] - line_cards_face[i] - 1;
-        }
-    }
-
     return gap;
 }
 /**********************分析无癞子时的用的函数**********************/
