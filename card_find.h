@@ -16,14 +16,14 @@ class CardFind
 {
 public:
 	vector<vector<Card> > results;
-	vector<int> results_type; //查找的牌的类型
+	//vector<int> results_type; //查找的牌的类型
 
     int ghost_face;//鬼牌面值
 
     int compare_type; //要找的牌型，或能大过这个牌型的牌型
     int compare_face; //要找牌型的值能取的最小值-1
-    CardStatistics my_card_stat;
-    CardStatistics card_stat;
+    CardStatistics my_card_stat;//自己手上牌
+    CardStatistics card_stat;//上家 玩家打出的牌
 	
     CardFind(int g_face = 0, bool robotFlag = false);
     CardFind(const vector<Card> &compare_cards, const vector<Card> &my_cards, int ctype = 0, int cface = 0, int gface = 0, bool robotFlag = false);
@@ -69,6 +69,8 @@ public:
     vector<int> from_three;//如果查找单或一对，记得查到单牌或一对是从三张拆出来的results中的下标
     // vector<int> from_bomb; //记录是否是炸弹
     void set_robot_flag(bool robotFlag);
+    int has_bomb_type_of(int);
+
   private:
     inline bool has_ghost() const { return ghost_face != 0; } 
 
@@ -96,6 +98,7 @@ public:
     void copy_card1_without_king(const vector<Card> &card1, vector<Card> &cards);
 
     void robot_data_analysis(const vector<Card> &ana_cards);
+    bool check_face_reprat(const vector<vector<Card> > &compare_cards, const vector<Card> &my_cards, const int compare_type);
 };
 
 

@@ -79,7 +79,7 @@
             "diceFace": 15,
             "compareType": 6,
             "compareFace": 5,
-            "expertResult": 0,
+            "expertResult": 1,
             "myCards": [3, 3, 4, 5, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 10, 10, 2, 2, 2, 2]
         }
     ],

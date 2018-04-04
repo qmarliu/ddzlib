@@ -290,8 +290,8 @@ void print_results(ostream &output, const vector<T> &results, int flag = 1,
 int test_find()
 {
     //读取测试文件中的牌型
-    // ifstream input("test_data/input_find_data.json");
-    ifstream input("test_data/debug_data.json");
+    ifstream input("test_data/input_find_data.json");
+    // ifstream input("test_data/debug_data.json");
     if (!input)
     {
         printf("can't open the data file test_data/input_data.json\n");
