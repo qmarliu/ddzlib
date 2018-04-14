@@ -1,0 +1,80 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceRoot}"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceRoot}"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceRoot}",
+                "D:/Program Files/llvm/lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++",
+                "D:/Program Files/llvm/lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/x86_64-w64-mingw32",
+                "D:/Program Files/llvm/lib/gcc/x86_64-w64-mingw32/7.1.0/include/c++/backward",
+                "D:/Program Files/llvm/lib/gcc/x86_64-w64-mingw32/7.1.0/include",
+                "D:/Program Files/llvm/include",
+                "D:/Program Files/llvm/x86_64-w64-mingw32/include",
+                "D:/Program Files/llvm/lib/gcc/x86_64-w64-mingw32/7.1.0/include-fixed"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "__GNUC__=7",
+                "__cdecl=__attribute__((__cdecl__))"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "browse": {
+                "path": [
+                    "D:/Program Files/llvm/x86_64-w64-mingw32/include",
+                    "D:/Program Files/llvm/lib/gcc/x86_64-w64-mingw32/7.1.0/include",
+                    "D:/Program Files/llvm/lib/gcc/x86_64-w64-mingw32/7.1.0/include-fixed",
+                    "D:/Program Files/llvm/include/*",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 3
+}

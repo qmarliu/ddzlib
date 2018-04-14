@@ -243,6 +243,15 @@ void results_format(ostream &output, const AnaResult &result)
     else
         output << "\"flag\": " << setw(format_width + 10) << left << "Correct";
     output << right << " \"from\": " << result.test_type << endl;
+
+    vector<int> faces;
+    CardAnalysis::getGhostFace(faces, result.vc, result.diceFace, result.anaType, result.anaFace);
+    output << "ghostFace: ";
+    for(const auto &face : faces)
+    {
+        output << face << " ";
+    }
+    output << endl;
     output << "************************************************" << endl << endl;
 }
 
@@ -290,8 +299,8 @@ void print_results(ostream &output, const vector<T> &results, int flag = 1,
 int test_find()
 {
     //读取测试文件中的牌型
-    // ifstream input("test_data/input_find_data.json");
-    ifstream input("test_data/debug_data.json");
+    ifstream input("test_data/input_find_data.json");
+    // ifstream input("test_data/debug_data.json");
     if (!input)
     {
         printf("can't open the data file test_data/input_data.json\n");
@@ -417,6 +426,7 @@ int test_analysis()
 {
 //读取测试文件中的牌型
     ifstream input("test_data/input_ana_data.json");
+    // ifstream input("test_data/debug_data.json");
     if (!input)
     {
         printf("can't open the data file test_data/input_data.json\n");
@@ -425,8 +435,8 @@ int test_analysis()
     json j;
     input >> j; //存到json对象中
 
-    ofstream output("test_data/output_data.json");
-    output << j.dump(4);
+    // ofstream output("test_data/output_data.json");
+    // output << j.dump(4);
 
     vector<AnaResult> anaResults;
     CardAnalysis card_ana;
@@ -484,8 +494,8 @@ int test_analysis()
         }
     }
 
-    ofstream out("data.txt");
-    print_results(out, anaResults); //检测所有牌型，但只输出错误信息
+    // ofstream out("data.txt");
+    // print_results(out, anaResults); //检测所有牌型，但只输出错误信息
 
     ofstream set_out("set_out_data.txt");
     bitset<17> display_type; //设置显示输出的类型
@@ -505,13 +515,13 @@ int test_analysis()
     display_type.set(CARD_TYPE_SOFTBOMB);// 4个	软炸弹，有癞子
     display_type.set(CARD_TYPE_BOMB);// 4个		硬炸弹
     display_type.set(CARD_TYPE_GHOSTBOMB);// 4个	纯癞子炸弹
-    // display_type.set(CARD_TYPE_ROCKET);// 2个鬼	火箭
+    display_type.set(CARD_TYPE_ROCKET);// 2个鬼	火箭
     print_results(set_out, anaResults, 0x03, display_type);
     return 0;
 }
 
 int main(int argc, char *argv[])
 {
-    // test_analysis();
-    test_find();
+    test_analysis();
+    // test_find();
 }

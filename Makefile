@@ -2,14 +2,14 @@
 CC = gcc
 CXX = g++
 CFLAGS = -g -O2 -Wall 
-CXXFLAGS = -g -O2 -frtti -fexceptions -Wall #-std=c++11
+CXXFLAGS = -g -O2 -frtti -fexceptions -Wall -std=c++11
 INCPATH = #-I/usr/include/mysql
 LD = gcc
 LFLAGS = #-static
-LIBS = -L. -lstdc++
+LIBS = -L. -lstdc++ -lpthread
 
 STATIC_LIB = libddz.a
-OBJECTS_LIB = card.o deck.o hole_cards.o community_cards.o card_statistics.o card_analysis.o card_find.o
+OBJECTS_LIB = card.o deck.o hole_cards.o community_cards.o card_statistics.o card_analysis.o card_find.o libgtest.a
 
 DESTDIR_TARGET = test
 OBJECTS = test_lib.o $(OBJECTS_LIB)

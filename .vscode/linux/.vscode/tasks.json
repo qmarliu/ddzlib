@@ -1,0 +1,39 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Compile",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "${file}",
+                "-o", // 指定输出文件名，不加该参数则默认输出a.exe
+                "${fileDirname}/${fileBasenameNoExtension}.out",
+                "-g", // 生成和调试有关的信息
+                "-Wall", // 开启额外警告
+                "-std=c++11" // c++1z即c++17，C语言最新标准为c11，或根据自己的需要进行修改
+            ], // 编译命令参数            
+            "group": {
+                "kind": "build",
+                "isDefault": true // 设为false可做到一个tasks.json配置多个编译指令，需要自己修改本文件，我这里不多提
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "/"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$", // 正则表达式，用于描述在“问题”栏中显示的信息。
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        }
+    ]
+}

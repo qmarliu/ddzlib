@@ -29,11 +29,15 @@ public:
 	void clear();
 	int analysis(const CardStatistics &anacard_stat);
     int analysis(const std::vector<Card> &anaCards, int set_ghost_face);
-    int get_card_face_of_type(CardType expect_type);
+    int get_card_face_of_type(int expect_type);
 
 	bool operator <  (const CardAnalysis &card_ana) const;
 
     static bool isGreater(const std::vector<Card> &anaCards, int ghost_face, int ctype, int cface);
+    static bool isGreater(const std::vector<Card> &anaCards, int ghost_face, int ctype, int cface, int &ret_type, int &ret_face);
+    static void getGhostFace(vector<int> &faces, const vector<Card> &anaCards, int ghost_face, int ctype, int cface);
+	static bool check_type_face(const vector<int> &ana_card, int ctype, int cface, int gface);
+	static bool check_type_face(const vector<Card> &ana_card, int ctype, int cface, int gface);
 
     //分析无癞子时的用的函数
 	bool check_is_line(const CardStatistics &card_stat, int line_type);

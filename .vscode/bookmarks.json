@@ -1,0 +1,27 @@
+{
+	"onDidClearBookmarkEmitter": {},
+	"onDidClearAllBookmarksEmitter": {},
+	"onDidAddBookmarkEmitter": {},
+	"onDidRemoveBookmarkEmitter": {},
+	"onDidUpdateBookmarkEmitter": {},
+	"bookmarks": [
+		{
+			"fsPath": "$ROOTPATH$\\card_analysis.cc",
+			"bookmarks": [
+				94
+			]
+		},
+		{
+			"fsPath": "$ROOTPATH$\\card_find.h",
+			"bookmarks": [
+				83
+			]
+		},
+		{
+			"fsPath": "$ROOTPATH$\\card_find.cc",
+			"bookmarks": [
+				588
+			]
+		}
+	]
+}

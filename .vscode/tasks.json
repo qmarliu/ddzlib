@@ -1,0 +1,48 @@
+// https://code.visualstudio.com/docs/editor/tasks
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "Compile", // 任务名称，与launch.json的preLaunchTask相对应
+            "command": "clang++", // 如果用MinGW，编译C用gcc，编译c++用g++
+            "args": [
+                "${file}",
+                "-o", // 指定输出文件名，不加该参数则默认输出a.exe
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "-g", // 生成和调试有关的信息
+                "-Og",
+                "-Wall", // 开启额外警告
+                "-static-libgcc", // 静态链接
+                "-fcolor-diagnostics",
+                "--target=x86_64-w64-mingw", // 默认target为msvc，不加这一条就会找不到头文件
+                "-std=c++1z" // c++1z即c++17，C语言最新标准为c11，或根据自己的需要进行修改
+            ], // 编译命令参数
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true // 设为false可做到一个tasks.json配置多个编译指令，需要自己修改本文件，我这里不多提
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "silent", // 设置是否在“终端”中显示编译信息，可以为always，silent，never。一些错误提示也在这里，但是因为有静态检测，我就设为silent了。
+                "focus": false,
+                "panel": "shared" // 不同的文件的编译信息共享一个终端面板
+            },
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "/"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$", // 正则表达式，用于描述在“问题”栏中显示的信息。
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            } // 1.11.0的更新日志里说可以直接写"problemMatcher": "$gcc"，但是我试了一下不行。
+        }
+    ]
+}

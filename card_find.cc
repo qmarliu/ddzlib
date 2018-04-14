@@ -18,11 +18,6 @@ CardFind::CardFind(const vector<Card> &compare_cards, const vector<Card> &my_car
     init(compare_cards, my_cards, ctype, cface, gface);
 }
 
-void CardFind::set_robot_flag(bool robotFlag)
-{
-    robot_flag = robotFlag;
-}
-
 /*
  @breif 初始代成员变量
  @param compare_cards[in] 去比较的牌
@@ -100,11 +95,12 @@ int CardFind::tip(const vector<int> &compare_cards, const vector<int> &my_cards,
 }
 
 /*
- @brief 在cards1中查找比cards0中牌型大的牌，并将查找的结果放在results中。
- @param compare_cards[in] 去比较的牌
- @param my_cards[in] 可用来查找的牌
+ @brief 在my_cards中查找比compare_cards中牌型大的牌，并将查找的结果放在results中。
+ @param compare_cards[in] 上家玩家打出去的脾 去比较的牌
+ @param my_cards[in] 我自己的牌 可用来查找的牌
  @param ctype[in] compare_cards中可能有多个牌型，指出要找的牌型
  @param cface[in] 要找出牌型的最大face值
+ @param gface[in] 鬼牌的面值
  @retur -1表示cards0没有牌， -2表示card2中没有牌， 0表示没找到  1表示找到了
 */
 int CardFind::tip(const vector<Card> &compare_cards, const vector<Card> &my_cards, int ctype, int cface, int gface)
@@ -438,9 +434,21 @@ bool CardFind::find_three(const vector<Card> &diceCards)
     if (card_stat.len != 3) return false;
     if (diceCards.size() > 3) return false;
     vector<Card> cards;
-    copy_card1_without_king(my_card_stat.card1, cards);
-    std::copy(my_card_stat.card2.begin(), my_card_stat.card2.end(), back_inserter(cards));
-    std::copy(my_card_stat.card3.begin(), my_card_stat.card3.end(), back_inserter(cards));
+	// copy_card1_without_king(my_card_stat.card1, cards);
+	// std::copy(my_card_stat.card2.begin(), my_card_stat.card2.end(), back_inserter(cards));
+	// std::copy(my_card_stat.card3.begin(), my_card_stat.card3.end(), back_inserter(cards));
+	if (diceCards.size() == 0)
+	{
+		std::copy(my_card_stat.card3.begin(), my_card_stat.card3.end(), back_inserter(cards));
+	}
+	else if (diceCards.size() == 1)
+	{
+		std::copy(my_card_stat.card2.begin(), my_card_stat.card2.end(), back_inserter(cards));
+	}
+	else if (diceCards.size() == 3)
+	{
+		copy_card1_without_king(my_card_stat.card1, cards);
+	}
 
     int diff = cards.size() + diceCards.size() - card_stat.len;
     if (diff < 0 ) return false; //长度上就不占优势，找不到的
@@ -505,9 +513,9 @@ bool CardFind::find_planewithone(const vector<Card> &diceCards)
     {
         std::copy(my_card_stat.card2.begin() + card2Cnt, my_card_stat.card2.end(), back_inserter(cards));
     }
-    std::copy(my_card_stat.card3.begin(), my_card_stat.card3.end(), back_inserter(cards));
+	std::copy(my_card_stat.card3.begin(), my_card_stat.card3.end(), back_inserter(cards));
 
-    int diff = cards.size() + diceCards.size() - card_stat.len;
+	int diff = cards.size() + diceCards.size() - card_stat.len;
     if (diff < 0 ) return false; //长度上就不占优势，找不到的
     return find_anaCards_type_with_ghost(diff, cards, diceCards, fixCardSize);
 }
@@ -567,7 +575,7 @@ bool CardFind::find_planewithtwo(const vector<Card> &diceCards)
         std::copy(my_card_stat.card1.begin() + card1Cnt, my_card_stat.card1.end(), back_inserter(cards));
     }
 
-    int diff = cards.size() + diceCards.size() - card_stat.len;
+	int diff = cards.size() + diceCards.size() - card_stat.len;
     if (diff < 0 ) return false; //长度上就不占优势，找不到的
     return find_anaCards_type_with_ghost(diff, cards, diceCards, fixCardSize);
 }
@@ -717,16 +725,24 @@ bool CardFind::find_anaCards_type_with_ghost(int diff, const vector<Card> &cards
         }
         if (CardAnalysis::isGreater(anaCards, ghost_face, compare_type, compare_face))
         {
-            results.push_back(anaCards);
-            robot_data_analysis(anaCards);
-            founded = true;
+			// 去掉面值重复的
+			bool already_has = check_face_reprat(results, anaCards, compare_type);
+			if (!already_has)
+			{
+				results.push_back(anaCards);
+				robot_data_analysis(anaCards);
+				founded = true;
+			}
+			
         }
-        if (cards.size() > index + card_stat.len - diceCards.size())
+        while (cards.size() > index + card_stat.len - diceCards.size())
         { //加入分析的牌等于去的分析的牌，就会重叠，直接跳过
-            while (cards[fixCardSize + index] == cards[index + card_stat.len - diceCards.size()]) 
+            if (cards[fixCardSize + index] == cards[index + card_stat.len - diceCards.size()]) 
             {
                 ++index;
+                continue;
             }
+            break;
         }
     }
     return founded;
@@ -746,7 +762,6 @@ void CardFind::copy_card1_without_king(const vector<Card> &card1, vector<Card> &
     }
 }
 
-//end 工具函数
 
 /*
  @brief 分析找到的ana_cards的牌，看这个牌有没有拆对子，拆三张（只用要比较的牌是对子或）
@@ -775,6 +790,59 @@ void CardFind::robot_data_analysis(const vector<Card> &ana_cards)
             return;
         }
     }
+}
+
+/*
+ @brief 
+*/
+
+bool CardFind::check_face_reprat(const vector<vector<Card> > & compare_cards, const vector<Card> & my_cards, const int compare_type)
+{
+	vector<vector<Card> > _results = compare_cards;
+	vector<Card> _my_cards = my_cards;
+	for (unsigned k = 0; k < _results.size(); k++)
+	{
+		CardAnalysis _resCardAna(_results[k], ghost_face);
+		CardAnalysis _myCardAna(_my_cards, ghost_face);
+		const int res_find_face = _resCardAna.get_card_face_of_type(compare_type);
+		const int my_find_face = _myCardAna.get_card_face_of_type(compare_type);
+		if (my_find_face == res_find_face)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+//end 工具函数
+/**************下面是机器人相关的函数*************************************/
+
+void CardFind::set_robot_flag(bool robotFlag)
+{
+    robot_flag = robotFlag;
+}
+
+//找到指定的炸弹，则返回炸弹在results中的下标，否则返回-1
+int CardFind::has_bomb_type_of(int find_type)
+{
+	//vector<vector<Card> > results;
+    for (int i = results.size() - 1; i >= 0; --i)
+    {
+        if (results[i].size() != 4) continue;
+
+        CardStatistics st(results[i], ghost_face);
+        if (st.card4.size() == 4 && find_type == CARD_TYPE_BOMB)
+            return i;
+        if (st.ghost_cards.size() == 4 && find_type == CARD_TYPE_GHOSTBOMB)
+            return i;
+        if (find_type == CARD_TYPE_SOFTBOMB)
+        {
+            if (st.ghost_cards.size() + st.card1.size() == 4 ||
+                st.ghost_cards.size() + st.card2.size() == 4 ||
+                st.ghost_cards.size() + st.card3.size() == 4)
+                return i;
+        }
+    }
+    return -1;
 }
 
 //***********************下面是以前，无癞子的代码****************************
@@ -1074,7 +1142,7 @@ void CardFind::find_three_with_two(CardAnalysis &card_ana, CardStatistics &card_
 }
 
 void CardFind::find_plane_with_one(CardAnalysis &card_ana, CardStatistics &card_stat, CardStatistics &my_card_stat)
-{		
+{
 	int count = my_card_stat.line3.size() - card_stat.line3.size();
 	for (int i = 0; i <= count; i += 3)
 	{

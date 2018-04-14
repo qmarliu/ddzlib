@@ -1,26 +1,834 @@
 ************************************************
-find "cards": [6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 10, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 2, 2, 9, 9, 9, 9]
-compare "cards": [ 3, 3, 3, 4, 4, 4, 5, 5, 5, 7, 2, 10 ] "diceFace": 9
-"compareType": CARD_TYPE_PLANEWITHONE-9     "compareFace": 5
-"flag": Correct                             "from": CARD_TYPE_THREE
-outVc[0]: [ 9, 9, 9, 11, 11, 12, 12, 13, 13, 2, 2, 14 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[1]: [ 9, 9, 9, 11, 11, 12, 6, 6, 6, 7, 7, 7 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[2]: [ 9, 9, 9, 11, 11, 12, 7, 7, 7, 10, 10, 10 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[3]: [ 9, 9, 9, 9, 11, 11, 12, 12, 13, 13, 2, 2 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[4]: [ 9, 9, 9, 9, 11, 11, 12, 13, 13, 2, 2, 14 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[5]: [ 9, 9, 9, 9, 11, 11, 12, 6, 6, 6, 7, 7 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[6]: [ 9, 9, 9, 9, 11, 11, 12, 6, 6, 7, 7, 7 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[7]: [ 9, 9, 9, 9, 11, 11, 12, 7, 7, 7, 10, 10 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[8]: [ 9, 9, 9, 9, 11, 11, 12, 7, 7, 10, 10, 10 ] "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[9]: [ 6, 6, 6, 9 ]                    "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[10]: [ 7, 7, 7, 9 ]                    "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[11]: [ 10, 10, 10, 9 ]                 "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[12]: [ 11, 11, 9, 9 ]                  "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[13]: [ 12, 12, 9, 9 ]                  "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[14]: [ 13, 13, 9, 9 ]                  "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[15]: [ 2, 2, 9, 9 ]                    "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[16]: [ 14, 14, 9, 9 ]                  "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[17]: [ 8, 8, 8, 8 ]                    "outFrom"CARD_TYPE_PLANEWITHONE-9
-outVc[18]: [ 9, 9, 9, 9 ]                    "outFrom"CARD_TYPE_PLANEWITHONE-9
+analysis "cards": [ 9, 9, 9, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_GHOSTBOMB-15      "expertType": CARD_TYPE_GHOSTBOMB-15
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_GHOSTBOMB
+ghostFace: 9 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 9, 9, 9, 3 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [2]                  "expert-backUpType": [2]
+"ana-backUpFace": [7]                  "expert-backUpFace": [7]
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 3 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 7, 9, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 7                           "expertFace": 7
+"ana-backUpType": [2]                  "expert-backUpType": [2]
+"ana-backUpFace": [7]                  "expert-backUpFace": [7]
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 7 7 3 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 9, 9, 10 ]   "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 9, 9, 7 ]    "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": 7                           "expertFace": 7
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 6 5 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 8, 9, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 8                           "expertFace": 8
+"ana-backUpType": [2]                  "expert-backUpType": [2]
+"ana-backUpFace": [11]                 "expert-backUpFace": [11]
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 8 8 7 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 8, 9, 9, 12 ]   "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 7, 8, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": 10                          "expertFace": 10
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 10 9 
+************************************************
+
+************************************************
+analysis "cards": [ 5, 6, 7, 8, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 5, 6, 9, 13, 14 ]  "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 9, 9, 10, 11 ]  "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": J                           "expertFace": J
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 8 9 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 9, 11, 12, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 3, 4, 5, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 5, 6, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 8 7 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 5, 7, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_FOURWITHONE-11    "expertType": CARD_TYPE_FOURWITHONE-11
+"anaFace": 7                           "expertFace": 7
+"ana-backUpType": [2]                  "expert-backUpType": [2]
+"ana-backUpFace": [8]                  "expert-backUpFace": [8]
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 7 7 7 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 5, 7, 9, 9, 9, 10, 11, 12, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": K                           "expertFace": K
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 8 6 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 5, 7, 9, 9, 9, 9, 10, 11, 12, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": A                           "expertFace": A
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 14 8 6 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 5, 7, 9, 9, 10, 11, 12, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 1, 3, 5, 7, 11, 13, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_ONELINE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 7, 8, 8, 8, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [12]                 "expert-backUpType": [12]
+"ana-backUpFace": [8]                  "expert-backUpFace": [8]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 8, 8, 8, 9, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [12]                 "expert-backUpType": [12]
+"ana-backUpFace": [8]                  "expert-backUpFace": [8]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 8, 8, 8, 9, 9, 9, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [12]                 "expert-backUpType": [12]
+"ana-backUpFace": [8]                  "expert-backUpFace": [8]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 7, 8, 8, 9, 9, 9, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 8                           "expertFace": 8
+"ana-backUpType": [12]                 "expert-backUpType": [12]
+"ana-backUpFace": [12]                 "expert-backUpFace": [12]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 8 7 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 7, 8, 8, 9, 9, 9, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 8 7 7 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 8, 9, 9, 9, 10, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 8, 9, 9, 9, 10, 12, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": K                           "expertFace": K
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 11 7 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 8, 8, 9, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [12, 4]              "expert-backUpType": [12, 4]
+"ana-backUpFace": [15, 9]              "expert-backUpFace": [15, 9]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 8 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 8, 8, 9, 9, 11, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [6]                  "expert-backUpType": [6]
+"ana-backUpFace": [9]                  "expert-backUpFace": [9]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 10 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 8 7 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 7, 7, 8, 8, 9, 9, 10, 11, 12, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 6, 6, 8, 8, 8, 9, 9, 9, 10, 11, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 7 7 7 
+************************************************
+
+************************************************
+analysis "cards": [ 1, 2, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9, 11, 12, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [10]                 "expert-backUpType": [10]
+"ana-backUpFace": [8]                  "expert-backUpFace": [8]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 4, 5, 6, 6, 7, 7, 7, 9, 9, 9, 11, 11, 11, 11 ] "diceFace": 11
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHONE
+ghostFace: 8 8 8 6 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 10, 10, 10, 11, 11, 13, 13 ] "diceFace": 10
+"anaType": CARD_TYPE_PLANEWITHWING-10  "expertType": CARD_TYPE_PLANEWITHWING-10
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHWING
+ghostFace: 8 10 10 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 2, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 10, 10, 10, 11, 11, 13 ] "diceFace": 10
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [10]                 "expert-backUpType": [10]
+"ana-backUpFace": [8]                  "expert-backUpFace": [8]
+"flag": Correct                        "from": CARD_TYPE_PLANEWITHWING
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 9, 9, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_SOFTBOMB-13       "expertType": CARD_TYPE_SOFTBOMB-13
+"anaFace": 2                           "expertFace": 2
+"flag": Correct                        "from": CARD_TYPE_SOFTBOMB
+ghostFace: 15 15 15 15 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 9, 9 ]          "diceFace": 9
+"anaType": CARD_TYPE_THREE-5           "expertType": CARD_TYPE_THREE-5
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_THREE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 9, 10 ]         "diceFace": 9
+"anaType": CARD_TYPE_THREE-5           "expertType": CARD_TYPE_THREE-5
+"anaFace": 10                          "expertFace": 10
+"flag": Correct                        "from": CARD_TYPE_THREE
+ghostFace: 10 10 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 10, 10 ]        "diceFace": 9
+"anaType": CARD_TYPE_THREE-5           "expertType": CARD_TYPE_THREE-5
+"anaFace": 10                          "expertFace": 10
+"flag": Correct                        "from": CARD_TYPE_THREE
+ghostFace: 10 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 10, 11 ]        "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 14, 15 ]        "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 10, 14 ]        "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 3, 4, 4, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_THREELINE-6       "expertType": CARD_TYPE_THREELINE-6
+"anaFace": 4                           "expertFace": 4
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 4 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 4, 5, 6, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_FOURWITHONE-11    "expertType": CARD_TYPE_FOURWITHONE-11
+"anaFace": 4                           "expertFace": 4
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 4 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 5, 5, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_FOURWITHONE-11    "expertType": CARD_TYPE_FOURWITHONE-11
+"anaFace": 5                           "expertFace": 5
+"ana-backUpType": [4, 6]               "expert-backUpType": [4, 6]
+"ana-backUpFace": [6, 5]               "expert-backUpFace": [6, 5]
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 5 5 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 6, 5, 5, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 9, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_FOURWITHONE-11    "expertType": CARD_TYPE_FOURWITHONE-11
+"anaFace": 3                           "expertFace": 3
+"ana-backUpType": [4, 6]               "expert-backUpType": [4, 6]
+"ana-backUpFace": [5, 4]               "expert-backUpFace": [5, 4]
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 3 3 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 4, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_FOURWITHONE-11    "expertType": CARD_TYPE_FOURWITHONE-11
+"anaFace": 4                           "expertFace": 4
+"ana-backUpType": [6]                  "expert-backUpType": [6]
+"ana-backUpFace": [5]                  "expert-backUpFace": [5]
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 4 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 5, 5, 6, 6, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_THREELINE-6       "expertType": CARD_TYPE_THREELINE-6
+"anaFace": 6                           "expertFace": 6
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 6 5 4 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 9, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_TWOLINE-4         "expertType": CARD_TYPE_TWOLINE-4
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 8 8 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_TWOLINE-4         "expertType": CARD_TYPE_TWOLINE-4
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 5 4 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 9, 9, 10 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 10, 11, 11, 11, 12, 12, 12 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHWING-10  "expertType": CARD_TYPE_PLANEWITHWING-10
+"anaFace": 8                           "expertFace": 8
+"ana-backUpType": [6]                  "expert-backUpType": [6]
+"ana-backUpFace": [12]                 "expert-backUpFace": [12]
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 8 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 5, 5, 6, 6, 7, 7, 9, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHONE-9    "expertType": CARD_TYPE_PLANEWITHONE-9
+"anaFace": 7                           "expertFace": 7
+"ana-backUpType": [4, 6]               "expert-backUpType": [4, 6]
+"ana-backUpFace": [9, 7]               "expert-backUpFace": [9, 7]
+"flag": Correct                        "from": CARD_TYPE_THREELINE
+ghostFace: 7 6 5 9 
+************************************************
+
+************************************************
+analysis "cards": [ 8, 9, 9, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_SOFTBOMB-13       "expertType": CARD_TYPE_SOFTBOMB-13
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 8 8 8 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 3, 9, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHONE-7    "expertType": CARD_TYPE_THREEWITHONE-7
+"anaFace": 2                           "expertFace": 2
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 15 15 15 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 9, 9, 12 ]      "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHONE-7    "expertType": CARD_TYPE_THREEWITHONE-7
+"anaFace": Q                           "expertFace": Q
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 12 12 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 9, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_SOFTBOMB-13       "expertType": CARD_TYPE_SOFTBOMB-13
+"anaFace": 3                           "expertFace": 3
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 3 3 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 7, 7, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_SOFTBOMB-13       "expertType": CARD_TYPE_SOFTBOMB-13
+"anaFace": 7                           "expertFace": 7
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 7 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHONE-7    "expertType": CARD_TYPE_THREEWITHONE-7
+"anaFace": 3                           "expertFace": 3
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 3 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 9, 12 ]      "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHONE-7    "expertType": CARD_TYPE_THREEWITHONE-7
+"anaFace": 4                           "expertFace": 4
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 4 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 8, 9, 12 ]      "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 7, 8, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREEWITHONE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 8, 9, 9, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [2]                  "expert-backUpType": [2]
+"ana-backUpFace": [12]                 "expert-backUpFace": [12]
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 8 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 9, 9, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [2]                  "expert-backUpType": [2]
+"ana-backUpFace": [7]                  "expert-backUpFace": [7]
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 3 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 3, 9, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 2                           "expertFace": 2
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 15 15 15 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 9, 9, 9, 12 ]   "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": Q                           "expertFace": Q
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 12 12 3 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 9, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 7, 7, 7, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 7                           "expertFace": 7
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": 4                           "expertFace": 4
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 4 4 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 9, 9, 12 ]   "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": Q                           "expertFace": Q
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 12 12 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 8, 9, 9, 12 ]   "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 6, 7, 8, 9, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": 10                          "expertFace": 10
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 10 9 
+************************************************
+
+************************************************
+analysis "cards": [ 5, 6, 7, 8, 9 ]    "diceFace": 9
+"anaType": CARD_TYPE_ONELINE-2         "expertType": CARD_TYPE_ONELINE-2
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 5, 6, 9, 13, 14 ]  "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 5, 9, 13, 14, 15 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 5, 5, 9, 12, 12 ]  "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHTWO-8    "expertType": CARD_TYPE_THREEWITHTWO-8
+"anaFace": Q                           "expertFace": Q
+"flag": Correct                        "from": CARD_TYPE_THREEWITHTWO
+ghostFace: 12 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 9 ]             "diceFace": 9
+"anaType": CARD_TYPE_TWO-3             "expertType": CARD_TYPE_TWO-3
+"anaFace": 9                           "expertFace": 9
+"flag": Correct                        "from": CARD_TYPE_TWO
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 10 ]            "diceFace": 9
+"anaType": CARD_TYPE_TWO-3             "expertType": CARD_TYPE_TWO-3
+"anaFace": 10                          "expertFace": 10
+"flag": Correct                        "from": CARD_TYPE_TWO
+ghostFace: 10 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 14 ]            "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWO
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 9, 15 ]            "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWO
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_THREEWITHONE-7    "expertType": CARD_TYPE_THREEWITHONE-7
+"anaFace": 3                           "expertFace": 3
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 3 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 9, 9 ]       "diceFace": 9
+"anaType": CARD_TYPE_SOFTBOMB-13       "expertType": CARD_TYPE_SOFTBOMB-13
+"anaFace": 4                           "expertFace": 4
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 4 4 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 5, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_FOURWITHONE-11    "expertType": CARD_TYPE_FOURWITHONE-11
+"anaFace": 5                           "expertFace": 5
+"ana-backUpType": [2, 4]               "expert-backUpType": [2, 4]
+"ana-backUpFace": [8, 5]               "expert-backUpFace": [8, 5]
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 5 5 5 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 4, 5, 5, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_TWOLINE-4         "expertType": CARD_TYPE_TWOLINE-4
+"anaFace": 5                           "expertFace": 5
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 3 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 4, 6, 5, 5, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 5, 5, 8, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 9 
+************************************************
+
+************************************************
+analysis "cards": [ 4, 4, 5, 5, 8, 8, 9, 9, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_PLANEWITHWING-10  "expertType": CARD_TYPE_PLANEWITHWING-10
+"anaFace": 9                           "expertFace": 9
+"ana-backUpType": [4]                  "expert-backUpType": [4]
+"ana-backUpFace": [8]                  "expert-backUpFace": [8]
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 8 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_TWOLINE-4         "expertType": CARD_TYPE_TWOLINE-4
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 4 4 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9 ] "diceFace": 9
+"anaType": CARD_TYPE_TWOLINE-4         "expertType": CARD_TYPE_TWOLINE-4
+"anaFace": 8                           "expertFace": 8
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 5 4 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 9, 9, 10 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_TWOLINE-4         "expertType": CARD_TYPE_TWOLINE-4
+"anaFace": K                           "expertFace": K
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 5 4 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 15 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 9 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 3, 3, 4, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 9 9 9 
+************************************************
+
+************************************************
+analysis "cards": [ 2, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14 ] "diceFace": 9
+"anaType": CARD_TYPE_ERROR-0           "expertType": CARD_TYPE_ERROR-0
+"anaFace": 0                           "expertFace": 0
+"flag": Correct                        "from": CARD_TYPE_TWOLINE
+ghostFace: 9 9 9 9 
 ************************************************
 
