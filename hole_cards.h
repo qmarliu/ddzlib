@@ -56,7 +56,7 @@ public:
     void set_other_player_info(vector<int> &seatVec, vector<int> &cardLeft);
 
     //拆牌
-    vector<vector<Card>> splitedCards;
+    vector<vector<Card> > splitedCards;
     vector<int> splitedTypes;
 
     //玩家信息

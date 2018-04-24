@@ -554,6 +554,11 @@ int CardAnalysis::ghost_check_threewithone()
     /*else */
     if (ghost_num == 2 && card_stat.card1.size() == 2)
     {
+       if ((card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small) &&
+            (card_stat.card1[1].face == Card::Big || card_stat.card1[1].face == Card::Small))
+            {//有两个鬼牌
+                return 0; 
+            }
         max_face = card_stat.card1[1].face; //取card1中较大的牌做为最大的牌
     }
 
@@ -579,7 +584,8 @@ int CardAnalysis::ghost_check_threewithtwo()
     int max_face = 0;
     if (len != 5)
         return 0;
-    if (ghost_num == 4 && card_stat.card1.size() == 1)
+    if (ghost_num == 4 && card_stat.card1.size() == 1 &&
+        (card_stat.card1[0].face != Card::Big && card_stat.card1[0].face != Card::Small))
     {
         max_face = card_stat.card1[0].face;
         if (max_face < ghost_face)
@@ -597,10 +603,10 @@ int CardAnalysis::ghost_check_threewithtwo()
         }
     }
 
-    else if (ghost_num == 3 && card_stat.card1.size() == 2)
+    else if (ghost_num == 3 && card_stat.card1.size() == 2 &&
+             (card_stat.card1[1].face != Card::Big && card_stat.card1[1].face != Card::Small))
     {
         max_face = card_stat.card1[1].face; //取card1中较大的牌做为最大的牌
-        
     }
 
     else if (ghost_num == 2 && card_stat.card3.size() == 3)
@@ -609,7 +615,8 @@ int CardAnalysis::ghost_check_threewithtwo()
         
     }
 
-    else if (ghost_num == 2 && card_stat.card2.size() == 2 && card_stat.card1.size() == 1)
+    else if (ghost_num == 2 && card_stat.card2.size() == 2 && card_stat.card1.size() == 1 &&
+             (card_stat.card1[0].face != Card::Big && card_stat.card1[0].face != Card::Small))
     {
         max_face = card_stat.card2[1].face;
         if (card_stat.card2[1] < card_stat.card1[0])
@@ -617,16 +624,15 @@ int CardAnalysis::ghost_check_threewithtwo()
         
     }
 
-    else if (ghost_num == 1 && card_stat.card3.size() == 3 && card_stat.card1.size() == 1)
+    else if (ghost_num == 1 && card_stat.card3.size() == 3 && card_stat.card1.size() == 1 &&
+             (card_stat.card1[0].face != Card::Big && card_stat.card1[0].face != Card::Small))
     {
         max_face = card_stat.card3[2].face;
-        
     }
 
     else if (ghost_num == 1 && card_stat.card2.size() == 4)
     {
         max_face = card_stat.card2[3].face;
-        
     }
     ghost_set_face_and_type(CARD_TYPE_THREEWITHTWO, max_face);
     return max_face;

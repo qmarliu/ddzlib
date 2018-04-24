@@ -346,7 +346,7 @@ void HoleCards::split_oneline(vector<Card> &splits)
     }
 
     //删除合并的单顺
-    vector<vector<Card>>::iterator ite = splitedCards.begin();
+    vector<vector<Card> >::iterator ite = splitedCards.begin();
     for(; ite != splitedCards.end();)
     {
         if (ite->size() == 0)
