@@ -837,6 +837,10 @@ int CardAnalysis::ghost_check_fourwithone()
     else if (ghost_num == 3 && card_stat.card1.size() == 3)
     {
         max_face = card_stat.card1[2].face;
+        if (max_face > Card::Two)
+            max_face = card_stat.card1[1].face;
+        if (max_face > Card::Two)
+            max_face = card_stat.card1[0].face;
     }
 
     else if (ghost_num == 3 && card_stat.card1.size() == 1 && card_stat.card2.size() == 2)
@@ -894,6 +898,11 @@ int CardAnalysis::ghost_check_fourwithtwo()
         return 0;
     if (ghost_num == 4 && card_stat.card1.size() == 2 && card_stat.card2.size() == 2)
     {
+        if ((card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small) ||
+            (card_stat.card1[1].face == Card::Big || card_stat.card1[1].face == Card::Small))
+            {//有大小王
+                return 0;
+            }
         max_face = card_stat.card2[1].face;
         if (max_face < card_stat.card1[1].face)
         {
@@ -903,6 +912,10 @@ int CardAnalysis::ghost_check_fourwithtwo()
 
     else if (ghost_num == 4 && card_stat.card1.size() == 1 && card_stat.card3.size() == 3)
     {
+        if (card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small)
+        { //有大小王
+            return 0;
+        }
         max_face = card_stat.card3[2].face;
     }
 
@@ -918,16 +931,29 @@ int CardAnalysis::ghost_check_fourwithtwo()
 
     else if (ghost_num == 3 && card_stat.card1.size() == 2 && card_stat.card3.size() == 3)
     {
+        if ((card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small) ||
+            (card_stat.card1[1].face == Card::Big || card_stat.card1[1].face == Card::Small))
+        { //有大小王
+            return 0;
+        }
         max_face = card_stat.card3[2].face;
     }
 
     else if (ghost_num == 3 && card_stat.card1.size() == 1 && card_stat.card2.size() == 4)
     {
+        if (card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small)
+        { //有大小王
+            return 0;
+        }
         max_face = card_stat.card1[0].face;
     }
 
     else if (ghost_num == 3 && card_stat.card1.size() == 1 && card_stat.card4.size() == 4)
     {
+        if (card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small)
+        { //有大小王
+            return 0;
+        }
         max_face = card_stat.card4[3].face;
     }
 
@@ -938,12 +964,21 @@ int CardAnalysis::ghost_check_fourwithtwo()
 
     else if (ghost_num == 2 && card_stat.card1.size() == 2 && card_stat.card4.size() == 4)
     {
+        if ((card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small) ||
+            (card_stat.card1[1].face == Card::Big || card_stat.card1[1].face == Card::Small))
+            {//有大小王
+                return 0;
+            }
         max_face = card_stat.card4[3].face;
     }
 
     else if (ghost_num == 1 && card_stat.card1.size() == 1 &&
              card_stat.card2.size() == 2 && card_stat.card4.size() == 4)
     {
+        if (card_stat.card1[0].face == Card::Big || card_stat.card1[0].face == Card::Small)
+        { //有大小王
+            return 0;
+        }
         max_face = card_stat.card4[3].face;
     }
 
@@ -1147,6 +1182,10 @@ bool CardAnalysis::ghost_has_pane_with_two(vector<int> &triple_card_face, int &l
     {
         if (std::find(triple_card_face.begin(), triple_card_face.end(), refLine1[i].face) == triple_card_face.end())
         {
+            if (refLine1[i].face == Card::Big || refLine1[i].face == Card::Small)
+            { //有大小王
+                return false;
+            }
             left_cards_face.push_back(refLine1[i].face);
         }
     }
